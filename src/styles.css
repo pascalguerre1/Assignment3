@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body{padding-top: 70px;padding-bottom: 70px;}
+.pg-font-white{color: white;}
+.pg-font-black{color: black}
+li{color: #007bff}
+.pg-width{width: 100%}
+.pg-80-width{width: 80%; margin: auto;}
+.pg-left-padding {padding-left: 20px}
+.pg-no-underline:hover {text-decoration: none}
+/*b:hover{color: blue}*/
+i {vertical-align: middle;}
+.no-background{background-color: #FFFFFF}
+.pg-gray{background-color: #e5e5e5}
+.pg-absolute-right{position: absolute; right:15px;}
+.pg-front{z-index: 2}
+.pg-underline:hover {text-decoration: underline;}
+.pg-60-width{width: 60%; margin: auto;}
+.pg-text-gray{color:#777777;}
+.pg-hor-space{padding-left: 20px;}
