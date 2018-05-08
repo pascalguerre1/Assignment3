@@ -1,7 +1,7 @@
 	<!-- top nav bar -->
 		<nav class="navbar navbar-dark bg-primary fixed-top">
-			<a class="navbar-brand font-weight-bold pg-underline" href="Profile.html">Profile</a>
-			<a class="pg-font-white" href=""><i class="fas fa-check"></i></a>
+			<a class="navbar-brand font-weight-bold pg-underline" routerLink="/user/:uid">Profile</a>
+			<a class="pg-font-white" routerLink="/#"><i class="fas fa-check"></i></a>
 		</nav>
 	<!-- /top nav bar -->
 
@@ -25,8 +25,8 @@
 						<input type="text" name="Last-name" placeholder="Last Name" class="form-control">
 					</div>
 					<!-- buttons -->
-						<a class="btn btn-primary btn-block" href="../Website/Website-list.html">Websites</a>
-						<a class="btn btn-danger btn-block" href="login.html">Logout</a>
+						<a class="btn btn-primary btn-block" routerLink="/user/:uid/website">Websites</a>
+						<a class="btn btn-danger btn-block" routerLink="/login">Logout</a>
 					<!-- /buttons -->
 				</form>
 		</div>
@@ -35,7 +35,7 @@
 	<!-- footer nav bar -->
 		<nav class="navbar navbar-dark bg-primary fixed-bottom">
 			<div class="pg-width">
-			<a class="pg-font-white float-right" href="Profile.html"><i class="fas fa-user"></i></a>
+			<a class="pg-font-white float-right" routerLink="/user/:uid"><i class="fas fa-user"></i></a>
 			</div>
 		</nav>
 	<!-- /footer nav bar -->

@@ -1,11 +1,11 @@
 	<!-- Top nav bar -->
 		<nav class="navbar navbar-light pg-gray fixed-top">
-			<a class="pg-font-black" href="../Website/Website-list.html"><i class="fas fa-chevron-left"></i></a>
+			<a class="pg-font-black" routerLink="/user/:uid/website"><i class="fas fa-chevron-left"></i></a>
 			<!-- <div class="container"> -->
 			<div class="pg-80-width">
-				<a class="navbar-brand font-weight-bold float-left" href=""><b class="pg-text-gray pg-underline">Pages</b></a>
+				<a class="navbar-brand font-weight-bold float-left" routerLink="/#"><b class="pg-text-gray pg-underline">Pages</b></a>
 			</div>
-			<a class="pg-font-black" href="Page-New.html"><i class="fas fa-plus"></i></a>
+			<a class="pg-font-black" routerLink="/user/:uid/website/:wid/page/new"><i class="fas fa-plus"></i></a>
 		</nav>
 	<!-- /Top nav bar -->
 	
@@ -13,28 +13,28 @@
 		<div class="container-fluid">
 			<ul class="list-group">
 			  <li class="list-group-item d-flex justify-content-between align-items-center">
-			    <a href="../Widget/Widget-list.html">Blog Post</a>
-			    <a href="Page-edit.html"><i class="fas fa-cog"></i>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid/widget">Blog Post</a>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid"><i class="fas fa-cog"></i>
 			    </a>
 			  </li>
 			  <li class="list-group-item d-flex justify-content-between align-items-center">
-			    <a href="../Widget/Widget-list.html">Blog</a>
-			    <a href="Page-edit.html"><i class="fas fa-cog"></i>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid/widget">Blog</a>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid"><i class="fas fa-cog"></i>
 			    </a>
 			  </li>
 			  <li class="list-group-item d-flex justify-content-between align-items-center">
-			    <a href="../Widget/Widget-list.html">Home</a>
-			    <a href="Page-edit.html"><i class="fas fa-cog"></i>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid/widget">Home</a>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid"><i class="fas fa-cog"></i>
 			    </a>
 			  </li>
 			  <li class="list-group-item d-flex justify-content-between align-items-center">
-			    <a href="../Widget/Widget-list.html">About</a>
-			    <a href="Page-edit.html"><i class="fas fa-cog"></i>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid/widget">About</a>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid"><i class="fas fa-cog"></i>
 			    </a>
 			  </li>
 			  <li class="list-group-item d-flex justify-content-between align-items-center">
-			    <a href="../Widget/Widget-list.html">Contact Us</a>
-			    <a href="Page-edit.html"><i class="fas fa-cog"></i>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid/widget">Contact Us</a>
+			    <a routerLink="/user/:uid/website/:wid/page/:pid"><i class="fas fa-cog"></i>
 			    </a>
 			  </li>
 			</ul>
@@ -44,7 +44,7 @@
 	<!-- Footer nav bar -->
 		<nav class="navbar navbar-dark pg-gray fixed-bottom">
 			<div class="pg-width">
-				<a class="float-right" href="../User/profile.html"><i class="fas fa-user"></i></a>
+				<a class="float-right" routerLink="/user/:uid"><i class="fas fa-user"></i></a>
 			</div>
 		</nav>
 	<!-- /Footer nav bar -->

@@ -1,10 +1,10 @@
 	<!-- Top nav bar -->
 		<nav class="navbar navbar-light pg-gray fixed-top">
-			<a href="Widget-list.html" class="pg-font-black"><i class="fas fa-chevron-left"></i></a>
+			<a routerLink="/user/:uid/website/:wid/page/:pid/widget" class="pg-font-black"><i class="fas fa-chevron-left"></i></a>
 			<div class="pg-80-width">
-				<a class="navbar-brand font-weight-bold float-left" href=""><b class="pg-text-gray pg-underline">Widget Edit</b></a>
+				<a class="navbar-brand font-weight-bold float-left" routerLink="/#"><b class="pg-text-gray pg-underline">Widget Edit</b></a>
 			</div>
-			<a class="pg-font-black" href="Widget-List.html"><i class="fas fa-check"></i></a>
+			<a class="pg-font-black" routerLink="/user/:uid/website/:wid/page/:pid/widget"><i class="fas fa-check"></i></a>
 		</nav>
 	<!-- /Top nav bar -->
 
@@ -39,11 +39,11 @@
 				<!-- /Upload -->
 				<!-- buttons -->
 					<div>
-						<a class="btn btn-primary btn-block" href="#">Upload</a>
+						<a class="btn btn-primary btn-block" routerLink="/#">Upload</a>
 					</div>
 					<br>
 					<div>
-						<a class="btn btn-danger btn-block" href="Widget-list.html">Delete</a>
+						<a class="btn btn-danger btn-block" routerLink="/user/:uid/website/:wid/page/:pid/widget">Delete</a>
 					</div>
 				<!-- /buttons -->
 			</form>
@@ -53,7 +53,7 @@
 	<!-- Footer nav bar -->
 		<nav class="navbar navbar-dark fixed-bottom pg-gray">
 			<div class="pg-width">
-				<a class="float-right" href="../User/profile.html"><i class="fas fa-user"></i></a>
+				<a class="float-right" routerLink="/user/:uid"><i class="fas fa-user"></i></a>
 			</div>
 		</nav>
 	<!-- /Footer nav bar -->
