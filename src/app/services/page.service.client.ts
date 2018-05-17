@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Page } from '../models/page.model.client.ts';
+import { Page } from '../models/page.model.client';
 // injecting service into module
 @Injectable()
 
@@ -14,14 +14,14 @@ constructor() { }
   ]
 
   // adds the page parameter instance to the local pages array. The new page's websiteId is set to the websiteId parameter
-  createPage(websiteId: String, page: Page){
+  createPage(websiteId: string, page: Page){
       page._id = Math.floor(Math.random() * 10000).toString();
       page.websiteId = websiteId;
       this.pages.push(page);
       return page;
   }
   // retrieves the pages in local pages array whose websiteId matches the parameter websiteId
-  findPageByWebsiteId(websiteId: String){
+  findPageByWebsiteId(websiteId: string){
       var result = [];
       for (let x = 0; x < this.pages.length; x++) {
         if (this.pages[x].websiteId === websiteId) {
@@ -31,7 +31,7 @@ constructor() { }
       return result;
   }
   // retrieves the page in local pages array whose _id matches the pageId parameter
-  findPageById(pageId: String){
+  findPageById(pageId: string){
       for (let x = 0; x < this.pages.length; x++) {
         if (this.pages[x]._id === pageId) {
           return this.pages[x];
@@ -39,7 +39,7 @@ constructor() { }
       }
   }
   // updates the page in local pages array whose _id matches the pageId parameter
-  updatePage(pageId: String, page: Page){
+  updatePage(pageId: string, page: Page){
     var oldPage = this.findPageById(pageId);
     var index = this.pages.indexOf(oldPage);
 
@@ -47,7 +47,7 @@ constructor() { }
     this.pages[index].description = page.description;
   }
   // removes the page from local pages array whose _id matches the pageId parameter
-  deletePage(pageId: String){
+  deletePage(pageId: string){
     var oldPage = this.findPageById(pageId);
     var index = this.pages.indexOf(oldPage);
     this.pages.splice(index,1);

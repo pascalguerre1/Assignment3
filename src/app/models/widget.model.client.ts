@@ -1,11 +1,11 @@
 export class Widget {
-	_id: String;
-	widgetType: String;
-	pageId: String;
-	size?: Number;
-	text?: String;
-	width?: String;
-	url?: String;
+	_id: string;
+	widgetType: string;
+	pageId: string;
+	size?: number;
+	text?: string;
+	width?: string;
+	url?: string;
 
 	constructor(_id, widgetType, pageId) {
 		this._id = _id;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Website} from '../models/website.model.client.ts';
+import {Website} from '../models/website.model.client';
 // injecting service into module
 @Injectable()
 
@@ -19,14 +19,14 @@ constructor() { }
 
 
  // adds the website parameter instance to the local websites array. The new website's developerId is set to the userId parameter
-  createWebsite(userId: String, website:  Website) {
+  createWebsite(userId: string, website:  Website) {
     website._id = Math.floor(Math.random() * 10000).toString();
     website.developerId = userId;
     this.websites.push(website);
     return website;
   }
 // retrieves the websites in local websites array whose developerId matches the parameter userId
-  findWebsitesByUser(userId: String) {
+  findWebsitesByUser(userId: string) {
     var result = [];
     for (let x = 0; x < this.websites.length; x++) {
       if (this.websites[x].developerId === userId) {
@@ -36,7 +36,7 @@ constructor() { }
     return result;
   }
 // retrieves the website in local websites array whose _id matches the websiteId parameter
-  findWebsiteById(websiteId: String) { 
+  findWebsiteById(websiteId: string) { 
     for (let x = 0; x < this.websites.length; x++) {
       if (this.websites[x]._id === websiteId) {
         return this.websites[x];
@@ -44,7 +44,7 @@ constructor() { }
     }
    }
 // updates the website in local websites array whose _id matches the websiteId parameter
-  updateWebsite(websiteId: String, website:  Website) { 
+  updateWebsite(websiteId: string, website:  Website) { 
     var oldWeb = this.findWebsiteById(websiteId);
     var index = this.websites.indexOf(oldWeb);
 
@@ -52,7 +52,7 @@ constructor() { }
     this.websites[index].description = website.description;
    }
 // removes the website from local websites array whose _id matches the websiteId parameter
-  deleteWebsite(websiteId: String) { 
+  deleteWebsite(websiteId: string) { 
     var web = this.findWebsiteById(websiteId);
     var index = this.websites.indexOf(web);
     this.websites.splice(index,1);

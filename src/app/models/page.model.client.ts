@@ -1,8 +1,8 @@
 export class Page {
-	_id: String;
-	name: String;
-	websiteId: String;
-	description: String;
+	_id: string;
+	name: string;
+	websiteId: string;
+	description: string;
 
 	constructor(_id, name, websiteId, description) {
 		this._id = _id;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Widget } from ' ../models/widget.model.client.ts';
+import { Widget } from '../models/widget.model.client';
 // injecting service into module
 @Injectable()
 
@@ -19,14 +19,14 @@ widgets: Widget[] = [
 
 
   // adds the widget parameter instance to the local widgets array. The new widget's pageId is set to the pageId parameter
-  createWidget(pageId: String, widget: Widget){
+  createWidget(pageId: string, widget: Widget){
       widget._id = Math.floor(Math.random() * 10000).toString();
       widget.pageId = pageId;
       this.widgets.push(widget);
       return widget;
   }
   // retrieves the widgets in local widgets array whose pageId matches the parameter pageId
-  findWidgetsByPageId(pageId: String){
+  findWidgetsByPageId(pageId: string){
       var result = [];
       for (let x = 0; x < this.widgets.length; x++) {
         if (this.widgets[x].pageId === pageId) {
@@ -36,7 +36,7 @@ widgets: Widget[] = [
       return result;
   }
   // retrieves the widget in local widgets array whose _id matches the widgetId parameter
-  findWidgetById(widgetId: String){
+  findWidgetById(widgetId: string){
       for (let x = 0; x < this.widgets.length; x++) {
         if (this.widgets[x]._id === widgetId) {
           return this.widgets[x];
@@ -44,7 +44,7 @@ widgets: Widget[] = [
       }
   }
   // updates the widget in local widgets array whose _id matches the widgetId parameter
-  updateWidget(widgetId: String, widget: Widget){
+  updateWidget(widgetId: string, widget: Widget){
     const oldWidget = this.findWidgetById(widgetId);
     const index = this.widgets.indexOf(oldWidget);
 
@@ -54,7 +54,7 @@ widgets: Widget[] = [
     this.widgets[index].url = widget.url;
   }
   // removes the widget from local widgets array whose _id matches the widgetId parameter
-  deleteWidget(widgetId: String){
+  deleteWidget(widgetId: string){
     const oldWidget = this.findWidgetById(widgetId);
     const index = this.widgets.indexOf(oldWidget);
     this.widgets.splice(index,1);
